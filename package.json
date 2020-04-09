@@ -1,0 +1,96 @@
+{
+    "name": "remote-scroll",
+    "displayName": "Remote Scroll",
+    "description": "Scroll the document via JSON directives through socket connection remotely, the VSCode is a sync-viewport now!",
+    "version": "1.0.3",
+    "publisher": "CeresNorthPole",
+    "engines": {
+        "vscode": "^1.43.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "icon": "res/ke-remote-scroll-icon.png",
+    "repository": {"url": "https://github.com/noisnemid/vscode-extension-remote-scroll"},
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.start_rs",
+                "title": "Start Remote Scroll Server"
+            },
+            {
+                "command": "extension.stop_rs",
+                "title": "Stop Remote Scroll Server from listening permanently"
+            },
+            {
+                "command": "extension.toggle_rs",
+                "title": "Pause/Resume Remote Scroll Listening"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.start_rs",
+                "key": "ctrl+f12"
+            },
+            {
+                "command": "extension.toggle_rs",
+                "key": "f12"
+            }
+        ],
+        "configuration": {
+            "title": "Remote Scroll",
+            "properties": {
+                "RemoteScroll.host": {
+                    "type": "string",
+                    "default": "localhost",
+                    "description": "The host address of the Remote Control Server."
+                },
+                "RemoteScroll.port": {
+                    "type": "number",
+                    "default": 9527,
+                    "description": "The tcp/ip port the Remote Scroll Server listens on."
+                },
+                "RemoteScroll.checkFilename": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Whether to check active document file name before scrolling. if no, scroll the current active one."
+                },
+                "RemoteScroll.authCode": {
+                    "type": "string",
+                    "default": "",
+                    "description": "A string to identify or authorize connection."
+                },
+                "RemoteScroll.autoForceOpen": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "If file is not already opened in an editor when the server listens, automatically try to open the file that the client provides."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/glob": "^7.1.1",
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^12.12.30",
+        "@types/vscode": "^1.43.0",
+        "glob": "^7.1.5",
+        "mocha": "^6.2.2",
+        "tslint": "^5.20.0",
+        "typescript": "^3.6.4",
+        "vscode-test": "^1.2.2"
+    },
+    "dependencies": {
+        "@types/node": "^12.12.30"
+    }
+}

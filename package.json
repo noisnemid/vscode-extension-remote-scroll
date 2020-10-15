@@ -2,7 +2,7 @@
     "name": "remote-scroll",
     "displayName": "Remote Scroll",
     "description": "Scroll the document via JSON directives through socket connection remotely, the VSCode is a sync-viewport now!",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "publisher": "CeresNorthPole",
     "engines": {
         "vscode": "^1.43.0"

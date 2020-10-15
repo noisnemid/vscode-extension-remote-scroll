@@ -76,12 +76,17 @@ This extension contributes the following settings:
 
 ... -->
 
-<!-- ## Release Notes
+## Release Notes
+
+
+### 1.0.4
+
+upgrade package-lock.json following the security report of the development robot of vscode.
 
 
 ### 1.0.0
 
-Basically done. -->
+Basically done.
 
 <!-- Fixed issue #. -->
 

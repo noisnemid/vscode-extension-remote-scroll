@@ -79,13 +79,13 @@ This extension contributes the following settings:
 ## Release Notes
 
 
-### 1.0.5
+### 1.0.5, 1.0.6
 
-upgrade package dependenceis following the security report of the development robot of vscode.
+Upgrade package dependencies following the security report of the development robot of vscode.
 
 ### 1.0.4
 
-upgrade package-lock.json following the security report of the development robot of vscode.
+Upgrade package-lock.json following the security report of the development robot of vscode.
 
 
 ### 1.0.0

@@ -79,7 +79,7 @@ This extension contributes the following settings:
 ## Release Notes
 
 
-### 1.0.5, 1.0.6
+### 1.0.5, 1.0.6, 1.0.7
 
 Upgrade package dependencies following the security report of the development robot of vscode.
 
